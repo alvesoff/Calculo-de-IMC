@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculo de IMC</title>
+</head>
+<body>
+    <script>
+        let peso = parseFloat(prompt("Digite Seu Peso em Quilogramas"));
+        let altura = parseFloat(prompt("Digite Sua Altura em Metros"));
+
+        let imc = peso / (altura * altura);
+
+        let classificação;
+        if (imc < 18.5){
+            classificação = "Abaixo do Peso";
+        } else if (imc >= 18.5 && imc <= 24.9){
+            classificação = "Peso Normal";
+        } else if (imc >= 25 && imc <= 29.9){
+            classificação = "Com Sobre pressão";
+        }    else{
+                classificação = "Com Obesidade";
+            }
+
+    alert("Seu IMC é " + imc.toFixed(2) + classificação + ".");
+    </script>
+</body>
+</html>
